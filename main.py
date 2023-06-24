@@ -10,12 +10,7 @@ headers = {
 
 link = input("Enter Key Link: ")
 
-match = re.search(r"HWID=([a-f0-9]+)", link)
-if match:
-    hwid = match.group(1)
-else:
-    print("Invalid link, exiting...")
-    os.exit(1)
+hwid = link.replace("https://flux.li/windows/start.php?HWID=","")
 
 print(f"Got HWID: {hwid}")
 
