@@ -16,22 +16,22 @@ print(f"Got HWID: {hwid}")
 
 key_regex = r'let content = \("([^"]+)"\);'
 endpoints =  [
-    # {
-    #     "url": f"https://flux.li/windows/start.php?HWID={hwid}",
-    #     "referer": ""
-    # }, You can skip these links, they are not needed
+    {
+        "url": f"https://flux.li/windows/start.php?HWID={hwid}",
+        "referer": ""
+    },
     {
         "url": f"https://flux.li/windows/start.php?cf331c115dc1fda3067c0e3d3a8bda76=true&HWID={hwid}",
         "referer": f"https://flux.li/windows/start.php?HWID={hwid}"
     },
-    # {
-    #     "url": "https://fluxteam.net/windows/checkpoint/check1.php",
-    #     "referer": linkvertise
-    # }, You can skip these links, they are not needed
-    # {
-    #     "url": "https://fluxteam.net/windows/checkpoint/check2.php",
-    #     "referer": linkvertise
-    # }, You can skip these links, they are not needed
+    {
+        "url": "https://fluxteam.net/windows/checkpoint/check1.php",
+        "referer": linkvertise
+    }, 
+    {
+        "url": "https://fluxteam.net/windows/checkpoint/check2.php",
+        "referer": linkvertise
+    }, 
     {
         "url": "https://fluxteam.net/windows/checkpoint/main.php",
         "referer": linkvertise
@@ -57,6 +57,7 @@ for i in range (len(endpoints)):
             content = match.group(1)
             print(f"Bypassed successfully! Code: {content}")
         else:
+            print(response.text, response.headers)
             with open("bypass.html", "w") as f:
                 f.write(response.text)
             print("Bypassed not successfully! Code: None, response content has been written to bypass.html for debugging purposes.")
