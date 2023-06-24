@@ -1,6 +1,6 @@
 # Fluxus Key System Bypass
 
-This script allows you to bypass Fluxus Windows Key System and retrieve the key without going through the Linkvertise monetization process.
+This script allows you to bypass Fluxus Windows Key System and retrieve the key without going through the Linkvertise monetization process. Website version coming soonTM
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ This script allows you to bypass Fluxus Windows Key System and retrieve the key 
 
 ## Message to the Fluxus Team
 
-   I didn't make this so people can bypass the key system, please use this to fix your key system. (The captcha doesn't even get posted to the server for validation)
+   Please use this to fix your key system. (The captcha doesn't even get posted to the server for validation)
 
 ## Donations
 
